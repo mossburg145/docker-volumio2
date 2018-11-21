@@ -8,9 +8,10 @@ RUN apt-get update && \
     (wget -q -O - http://apt.mopidy.com/mopidy.gpg | apt-key add -) && \
     wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/stretch.list && \
     apt-get update && \
-    apt-get install -y libspotify-dev cmake pkgconf libjson-glib-1.0-0 libsoup2.4 libnotify4 libsox2 shairport-sync && \
+    apt-get install -y libspotify-dev cmake pkgconf libjson-glib-1.0-0 libsoup2.4 libnotify4 shairport-sync && \
     apt-get install -y libjson-glib-dev libao-dev libdbus-glib-1-dev libnotify-dev libsoup2.4-dev libsox-dev && \
-    dpkg -i /files/packages/snapserver_0.12.0_amd64.deb && \
+    dpkg -i /files/packages/libsox2_14.4.1-5build1_amd64.deb && \ 
+   dpkg -i /files/packages/snapserver_0.12.0_amd64.deb && \
     apt-get install -f -y && \
     mkdir -p ~/.config/spop && \
     git clone git://github.com/Schnouki/spop.git && \
